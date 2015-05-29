@@ -51,8 +51,8 @@ echo and if so, to restart it. We also added a script to crash bitcoind generous
 echo hour. Why? because we want to make sure it is not stuck processing something.
 
 cd ~
-wget --no-check-certificate https://www.dropbox.com/s/y5io9732b1z26ox/stopcoin.sh
-wget --no-check-certificate https://www.dropbox.com/s/oj10hwnj7dqtjsh/startcoin.sh
+wget --no-check-certificate https://github.com/jonklinger/Raspbian-Bitnote-Installer/raw/master/startcoin.sh
+wget --no-check-certificate https://github.com/jonklinger/Raspbian-Bitnote-Installer/raw/master/stopcoin.sh
 chmod +x startcoin.sh
 chmod +x stopcoin.sh
 
