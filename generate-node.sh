@@ -18,6 +18,13 @@ echo updating repositories.
 sudo apt-get update
 echo upgrading software
 sudo apt-get upgrade -y
+
+echo resizing swap
+sudo echo CONF_SWAPSIZE=2048 > /etc/dphys-swapfile
+echo restarting swap
+/etc/init.d/dphys-swapfile stop
+/etc/init.d/dphys-swapfile start
+
 echo installing required software for bitcoind.
 
 sudo apt-get install build-essential autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev libtool
