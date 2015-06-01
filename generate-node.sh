@@ -73,7 +73,7 @@ echo changing crontab to run the start and stop scripts. stopcoin will run on ev
 echo by 17, meaning 17, 34, and 51. startcoin will run every minute to check if bitcoind is running. if not,
 echo it will run it. If it is running, it will just log the block count.
 
-cat <(crontab -l) <(echo "*/1 * * * * /home/pi/startcoin.sh") | crontab -
-cat <(crontab -l) <(echo "*/17 * * * * /home/pi/stopcoin.sh") | crontab -
+cat <(crontab -l) <(echo "*/5 * * * * /home/pi/startcoin.sh") | crontab -
+cat <(crontab -l) <(echo "*/34 * * * * /home/pi/stopcoin.sh") | crontab -
 
 echo done. bitcoind should start within the minute. please check the running.log from time to time
