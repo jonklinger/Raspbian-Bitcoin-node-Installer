@@ -19,6 +19,9 @@ sudo apt-get update
 echo upgrading software
 sudo apt-get upgrade -y
 
+echo upgrading kernel
+sudo rpi-update
+
 echo resizing swap
 sudo echo CONF_SWAPSIZE=2048 > /etc/dphys-swapfile
 echo restarting swap
