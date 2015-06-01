@@ -69,11 +69,11 @@ chmod +x stopcoin.sh
 echo startcoin.sh starts the bitcoin daemon with very low resources. If you see your pi not crashing
 echo or something like that, you can increase the numbers.
 
-echo changing crontab to run the start and stop scripts. stopcoin will run on every minute which is divisable
-echo by 17, meaning 17, 34, and 51. startcoin will run every minute to check if bitcoind is running. if not,
-echo it will run it. If it is running, it will just log the block count.
+echo changing crontab to run the start and stop scripts. start will run on every five minutes to see if the daemon is up
+echo stopcoin will run every half hour (or so) to kill the daemon.
 
 cat <(crontab -l) <(echo "*/5 * * * * /home/pi/startcoin.sh") | crontab -
 cat <(crontab -l) <(echo "*/34 * * * * /home/pi/stopcoin.sh") | crontab -
 
-echo done. bitcoind should start within the minute. please check the running.log from time to time
+echo done. Please reboot.
+echo After reboot bitcoind should start within the minute. please check the running.log from time to time
