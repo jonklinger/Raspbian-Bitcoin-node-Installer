@@ -1,3 +1,4 @@
+#!/bin/bash -e
 echo ------------------------------------------------------------------
 echo Bitcoin Node Installer / (c) the Israeli Bitcoin Association, 2015
 echo ------------------------------------------------------------------
