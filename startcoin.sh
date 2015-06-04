@@ -1,3 +1,4 @@
+#!/bin/bash -e
 date >> /home/pi/.bitcoin/running.log
 
 if [ "$(pidof bitcoind)" ]
