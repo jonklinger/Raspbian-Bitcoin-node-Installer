@@ -1,6 +1,6 @@
 #!/bin/bash -e
 echo ------------------------------------------------------------------
-echo Bitcoin Node Installer / (c) the Israeli Bitcoin Association, 2015
+echo Bitcoin Node Installer / Copyright the Israeli Bitcoin Association, 2015
 echo ------------------------------------------------------------------
 echo BSD Licensed, NO WARRANTY WHATSOEVER. THIS MAY BRICK OR KILL
 echo this will work on Raspberry Pi model B, 512MB RAM.
@@ -63,18 +63,18 @@ echo hour. Why? because we want to make sure it is not stuck processing somethin
 
 cd ~
 wget --no-check-certificate https://github.com/jonklinger/Raspbian-Bitnote-Installer/raw/master/startcoin.sh
-wget --no-check-certificate https://github.com/jonklinger/Raspbian-Bitnote-Installer/raw/master/stopcoin.sh
+# wget --no-check-certificate https://github.com/jonklinger/Raspbian-Bitnote-Installer/raw/master/stopcoin.sh
 chmod +x startcoin.sh
-chmod +x stopcoin.sh
+# chmod +x stopcoin.sh
 
 echo startcoin.sh starts the bitcoin daemon with very low resources. If you see your pi not crashing
 echo or something like that, you can increase the numbers.
 
-echo changing crontab to run the start and stop scripts. start will run on every five minutes to see if the daemon is up
-echo stopcoin will run every half hour (or so) to kill the daemon.
+echo changing crontab to run the start script. start will run on every five minutes to see if the daemon is up.
+# echo stopcoin will run every half hour (or so) to kill the daemon.
 
 cat <(crontab -l) <(echo "*/5 * * * * /home/pi/startcoin.sh") | crontab -
-cat <(crontab -l) <(echo "*/34 * * * * /home/pi/stopcoin.sh") | crontab -
+# cat <(crontab -l) <(echo "*/34 * * * * /home/pi/stopcoin.sh") | crontab -
 
 echo done. Please reboot.
 echo After reboot bitcoind should start within the minute. please check the running.log from time to time
