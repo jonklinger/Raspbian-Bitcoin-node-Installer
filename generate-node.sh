@@ -26,8 +26,8 @@ sudo rpi-update
 echo resizing swap
 sudo echo CONF_SWAPSIZE=2048 > /etc/dphys-swapfile
 echo restarting swap
-/etc/init.d/dphys-swapfile stop
-/etc/init.d/dphys-swapfile start
+sudo /etc/init.d/dphys-swapfile stop
+sudo /etc/init.d/dphys-swapfile start
 
 echo installing required software for bitcoind.
 
