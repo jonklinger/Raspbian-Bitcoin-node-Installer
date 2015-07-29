@@ -9,7 +9,7 @@ It pulls all the relevant files, installs bitcoind, and then puts two scripts th
 Well, I tried to tweak the bitcoind settings here to run on Raspberry Pi Model B (the one with 512MB ram). I found a few people who said that they can run it on RPi2, but the guides for Model B did not work. I had to format, reformat and reformat again.
 
 # Will this work?
-Hoepfully. I'm currently syncing. I'm in a better stage from the last kernel panic and "oops" that I got.
+On RPi B v2 it works, i couldn't make it happen on RPi1.
 
 # License?
 This is BSD. 
