@@ -3,13 +3,14 @@ echo ------------------------------------------------------------------
 echo Bitcoin Node Installer / Copyright the Israeli Bitcoin Association, 2015
 echo ------------------------------------------------------------------
 echo BSD Licensed, NO WARRANTY WHATSOEVER. THIS MAY BRICK OR KILL
-echo this will work on Raspberry Pi model B, 512MB RAM.
+echo this will work on Raspberry Pi v2 model B, 1GB RAM.
 echo will probably also work on others.
 echo original installation instructions here: http://blog.pryds.eu/2014/06/compile-bitcoin-core-on-raspberry-pi.html
 echo low resource hacks from this German post: https://bitcoin-forums.net/index.php?topic=1062396.0
 
 
-echo if you do not have a 64GB, or bigger,SD card installed, do NOT run this.
+echo you need a 64GB USB flash drive linked at ~/.bitcoin. If you do not have this, it will fail.
+echo 
 echo this script assumes you did NOT change the original pi / raspberry username/password
 echo nor did you change the folder description.
 
