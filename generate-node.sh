@@ -34,9 +34,9 @@ echo installing required software for bitcoind.
 
 sudo apt-get install build-essential autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev libtool
 
-echo cloning the bitcoin git repository, v0.9. I will soon move to 0.10 once I make sure all works.
+echo cloning the bitcoin git repository.
 cd ~
-git clone -b 0.9 https://github.com/bitcoin/bitcoin.git
+git clone https://github.com/bitcoin/bitcoin.git
 
 cd bitcoin
 
